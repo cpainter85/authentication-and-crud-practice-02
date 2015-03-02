@@ -1,0 +1,10 @@
+%p
+  %strong Title:
+  =@movie.title
+%p
+  %strong Length:
+  =@movie.length
+%p
+  =link_to 'Back', movies_path
+  =link_to 'Edit', edit_movie_path(@movie)
+  =link_to 'Delete', movie_path(@movie), method: :delete, data: {confirm: 'Are you sure?'}
